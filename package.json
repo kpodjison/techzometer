@@ -1,0 +1,16 @@
+{
+  "name": "techzometer",
+  "version": "1.0.0",
+  "description": "An online shop for smartphones, laptops and accessories",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "sass --watch ./sass/style.scss ./src/css/style.css"
+  },
+  "author": "Kpodji Emmanuel Kwasi",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.2.2",
+    "owl.carousel": "^2.3.4"
+  }
+}
