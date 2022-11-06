@@ -12,7 +12,8 @@ $(document).ready(function(){
 
     // owl carousel 
     $("#hot-deals .owl-carousel").owlCarousel({
-        nav:true,
+        nav:true,        
+        dots:false,
         loop:true,
         margin: 10,
         responsive: {
@@ -43,6 +44,21 @@ $(document).ready(function(){
             },
             1000:{
                 items:5
+            }
+        }
+    });
+    // owl carousel 
+    $("#latest-blog .owl-carousel").owlCarousel({
+        nav:true,
+        loop:true,
+        margin: 10,
+        dots:false,
+        responsive: {
+            0:{
+                items:1
+            },
+            600:{
+                items:3
             }
         }
     });
