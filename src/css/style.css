@@ -11827,7 +11827,56 @@ textarea.form-control-lg {
   background-color: #43bee5;
 }
 
-.navbar a {
+body {
+  background-color: rgb(255, 255, 255);
+}
+
+button, button:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.navbar .navbar-brand {
+  color: #fff;
+}
+.navbar .navbar-brand:hover {
+  color: #43bee5;
+}
+.navbar .nav-item a {
+  color: #fff;
+}
+.navbar .nav-item a:hover {
+  color: #43bee5;
+}
+.navbar #shopping-cart {
+  text-decoration: none;
+}
+
+#footer #accounts a, #footer #useful-links a {
+  text-decoration: none;
+  color: #43bee5;
+}
+#footer #accounts a:hover, #footer #useful-links a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+#footer #news-letter-form .news-letter-btn {
+  background-color: #43bee5;
+  color: #fff;
+}
+#footer #news-letter-form .news-letter-btn:hover {
+  background-color: #fff;
+  color: #43bee5;
+}
+#footer #social-links .fa-brands {
+  font-size: 25px;
+  margin: 3px;
+}
+#footer #social-links a {
+  color: #43bee5;
+  transition: 0.8s;
+}
+#footer #social-links a:hover {
   color: #fff;
 }
 
