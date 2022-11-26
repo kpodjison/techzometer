@@ -62,4 +62,95 @@ $(document).ready(function(){
             }
         }
     });
+
+    /*Start of product page js*/
+    //Toggle effect to display accessories content when accessories button is clicked
+    
+    $(".access-btn").on("click",function(){    
+        $(".pull").each(function(){ 
+            var value = $(this).css("display");            
+
+            if(($(this).hasClass("content-access") == false) && value == "block"){
+                $(this).slideUp("slow");  
+                console.log("switched to accessories content");                  
+            }               
+        });
+        $(".pdt-dtl-btn").each(function(){
+            if($(this).hasClass("focus-btn") == true){
+                $(this).removeClass("focus-btn");  
+                console.log("class name removed");                  
+            }
+        });
+        $("#unq_prdt").find(".content-access").slideToggle("slow");
+        $(this).addClass("focus-btn");
+
+    });
+
+        //Toggle effect to display description content when description button is clicked
+    
+    $(".desc-btn").on("click",function(){    
+        $(".pull").each(function(){ 
+            var value = $(this).css("display");            
+
+            if(($(this).hasClass("content-desc") == false) && value == "block"){
+                $(this).slideUp("slow");  
+                console.log("switched to description content");                  
+            }               
+        });
+        $(".pdt-dtl-btn").each(function(){
+            if($(this).hasClass("focus-btn") == true){
+                $(this).removeClass("focus-btn");  
+                console.log("class name removed");                  
+            }
+        });
+        $("#unq_prdt").find(".content-desc").slideToggle("slow");
+        $(this).addClass("focus-btn");
+
+    });
+
+            //Toggle effect to display specification content when specification button is clicked
+    
+    $(".specs-btn").on("click",function(){    
+        $(".pull").each(function(){ 
+            var value = $(this).css("display");            
+
+            if(($(this).hasClass("content-specs") == false) && value == "block"){
+                $(this).slideUp("slow");  
+                console.log("switched to specification content");                  
+            }               
+        });
+        $(".pdt-dtl-btn").each(function(){
+            if($(this).hasClass("focus-btn") == true){
+                $(this).removeClass("focus-btn");  
+                console.log("class name removed");                  
+            }
+        });
+        $("#unq_prdt").find(".content-specs").slideToggle("slow");
+        $(this).addClass("focus-btn");
+
+    });
+
+        //Toggle effect to display reivews content when review button is clicked
+    
+    $(".rev-btn").on("click",function(){    
+        $(".pull").each(function(){ 
+            var value = $(this).css("display");            
+
+            if(($(this).hasClass("content-reviews") == false) && value == "block"){
+                $(this).slideUp("slow");  
+                console.log("switched to reviews content");                  
+            }               
+        });
+        $(".pdt-dtl-btn").each(function(){
+            if($(this).hasClass("focus-btn") == true){
+                $(this).removeClass("focus-btn");  
+                console.log("class name removed");                  
+            }
+        });
+        $("#unq_prdt").find(".content-reviews").slideToggle("slow");
+        $(this).addClass("focus-btn");
+
+    });
+
+    /* End of product page js*/
 });

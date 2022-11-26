@@ -11880,4 +11880,10 @@ button, button:focus {
   color: #fff;
 }
 
+#product .focus-btn {
+  border: 1px solid #43bee5;
+  border-bottom: 5px solid #43bee5;
+  transition: 1s;
+}
+
 /*# sourceMappingURL=style.css.map */
