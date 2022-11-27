@@ -1,5 +1,4 @@
 # Techzometer -- Ecommerce website website
-***
 `Techzometer` This project is an all in one e-commerce website for electronics such as mobile phones, labtops,Tvs, and their accessories.
 
 ## TECHNOLOGIES
@@ -9,7 +8,7 @@ The following are the technologies & tools used
   * SASS
 * JAVASCRIPT
   * JQuery
-  * SELECT2
+  <!-- #* SELECT2 -->
   * OWLCAROUSEL2
 * BOOSTRAP
 * PHP
