@@ -152,5 +152,26 @@ $(document).ready(function(){
 
     });
     
+    //Focus effect to show selected color    
+    $(".product-color-rbtn").on("click",function(){    
+        $(".product-color-rbtn").each(function(){
+            if($(this).hasClass("selected-color") == true){
+                $(this).removeClass("selected-color");  
+                console.log("class name removed");                  
+            }
+        });
+        $(this).addClass("selected-color");
+    });
+
+    //Focus effect to show selected RAM size    
+     $(".product-size-rbtn").on("click",function(){    
+        $(".product-size-rbtn").each(function(){
+            if($(this).hasClass("selected-size") == true){
+                $(this).removeClass("selected-size");  
+                console.log("class name removed");                  
+            }
+        });
+        $(this).addClass("selected-size");
+    });
     /* End of product page js*/
 });
