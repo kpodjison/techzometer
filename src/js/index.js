@@ -151,6 +151,6 @@ $(document).ready(function(){
         $(this).addClass("focus-btn");
 
     });
-
+    
     /* End of product page js*/
 });

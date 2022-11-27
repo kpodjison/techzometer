@@ -11847,6 +11847,7 @@ button, button:focus {
 }
 .navbar .nav-item a:hover {
   color: #43bee5;
+  cursor: pointer;
 }
 .navbar #shopping-cart {
   text-decoration: none;
@@ -11884,6 +11885,21 @@ button, button:focus {
   border: 1px solid #43bee5;
   border-bottom: 5px solid #43bee5;
   transition: 1s;
+}
+#product .color-select, #product .size-select {
+  display: none;
+}
+#product .selected-color, #product .selected-size {
+  border: 3px solid #43bee5;
+}
+#product .product-color-rbtn:hover {
+  cursor: pointer;
+  border: 3px solid #43bee5;
+}
+#product .product-size-rbtn:hover {
+  cursor: pointer;
+  border: 2px solid #43bee5;
+  padding: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

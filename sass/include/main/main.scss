@@ -24,6 +24,7 @@ button, button:focus
             color:#fff;
             &:hover{
                 color:$color-primary2;
+                cursor: pointer;
             }
         }
     

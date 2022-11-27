@@ -6,4 +6,28 @@
         border-bottom: 5px solid $color-primary2;
         transition: 1s;
     }
+
+    .color-select,.size-select
+    {
+        display: none;
+    }
+    .selected-color,.selected-size
+    {
+        border: 3px solid $color-primary2;
+    }
+    .product-color-rbtn
+    {
+        &:hover{
+            cursor: pointer;
+            border: 3px solid $color-primary2;
+        }
+    }
+    .product-size-rbtn
+    {
+        &:hover{
+            cursor: pointer;
+            border: 2px solid $color-primary2;
+            padding: 0;
+        }
+    }
 }
