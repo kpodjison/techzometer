@@ -7,5 +7,5 @@ $db = new DBController();
 $product = new Product($db);
 
 
-$latest_products = $product->GetLatestProducts();
+
 
