@@ -8,4 +8,4 @@ $product = new Product($db);
 
 
 $latest_products = $product->GetLatestProducts();
-$hot_deals = $product->GetHotDeals();
+
