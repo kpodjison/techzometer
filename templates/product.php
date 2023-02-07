@@ -1,3 +1,10 @@
+<?php 
+  if(isset($_GET['coming-soon']))
+  {
+    // echo 'coming soon';
+  }
+
+?>
 <section class="container my-5" id="product">
             <div class="row">
               <div class="col-lg-6">
