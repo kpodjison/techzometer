@@ -1,4 +1,8 @@
-<?php include('header.php'); ?>
+
+<?php 
+    include 'functions.php';
+    include('header.php');
+ ?>
 <?php include('templates/banner.php'); ?>
 <?php include('templates/hot-deals.php'); ?>
 <?php include('templates/latest-products.php'); ?>

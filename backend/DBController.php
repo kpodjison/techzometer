@@ -6,7 +6,7 @@
         protected $host = "localhost";
         protected $user = "root";
         protected $psw = "";
-        protected $db_name = "techzomerter";
+        protected $db_name = "techzometer";
 
         //connection object
         public $conn = null;
@@ -17,7 +17,7 @@
         //constructor
         public function __construct()
         {
-            $this->mysqli = new mysqli(
+            $this->mysql = new mysqli(
                 $this->host,
                 $this->user,
                 $this->psw,
@@ -39,7 +39,6 @@
                 {
                     // echo "DB Connection successful";
                 }
-            
         }
 
         //function to close db connection
