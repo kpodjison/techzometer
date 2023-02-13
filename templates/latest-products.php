@@ -18,8 +18,7 @@
                 <?php foreach($chunk as $item):?>
                   <div class="col-lg-3 col-sm-12 mb-2">              
                       <div class="border p-3">
-                        <a href="product.html"> <img src="./assets/<?php echo htmlentities($item['image'])?>" class="img-fluid" alt=""> </a>
-                    
+                       <img src="./assets/<?php echo htmlentities($item['image'])?>" class="img-fluid" alt="">                    
                         <div class="row text-center">
                           <p class="my-1"><?php echo htmlentities($item['product_name'])?></p>
                         <p class="my-1 text-warning">
@@ -30,9 +29,9 @@
                           <i class="fa-solid fa-star-half-stroke"></i>
                         </p>
                         <small class="my-1">GHC <?php echo htmlentities($item['product_price'])?></small>
-                        <form action="product.html">
-                          <input type="hidden" name="">
-                          <button type="submit" class="btn btn-warning mx-3">View Product</button>
+                        <form action="product.php" method="POST">
+                          <input type="hidden" name="pid" value="<?php echo htmlentities($item['product_id'])?>">
+                          <button type="submit" class="btn btn-primary mx-3" name="latest">View Details</button>
                         </form>
                         </div>
                       </div>

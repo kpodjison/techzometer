@@ -6,11 +6,11 @@
           <div class="owl-carousel owl-theme">
             <?php foreach($comming_soon as $item): ?>
               <div class="item p-2">
-              <a href=""> <img src="./assets/<?php echo htmlentities($item['image'])?>" class="img-fluid" alt=""> </a>
+                <img src="./assets/<?php echo htmlentities($item['image'])?>" class="img-fluid" alt=""> 
                 <div class="row text-center">
                   <p class="my-1"><?php echo htmlentities($item['product_name']) ?></p>
-                  <form action="product.php" method="GET">
-                    <input type="hidden" name="pid" value="<?php echo htmlentities($item['id'])?>">
+                  <form action="product.php" method="POST">
+                    <input type="hidden" name="pid" value="<?php echo htmlentities($item['product_id'])?>">
                     <button type="submit" class="btn btn-primary mx-3" name="coming-soon">View Details</button>
                   </form>
                 </div>

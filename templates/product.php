@@ -1,14 +1,37 @@
 <?php 
-  if(isset($_GET['coming-soon']))
+  if($_SERVER['REQUEST_METHOD'] === 'POST')
   {
-    // echo 'coming soon';
-  }
+    $pid = $current_product = '';
+    if(isset($_POST['pid']))
+    {
+      $pid = $_POST['pid'];
+    }
 
+    if(isset($_POST['coming-soon']))
+    {
+      $current_product  = $product->GetSingleProduct($pid,'cs');
+    }
+    else if(isset($_POST['hot-deals']))
+    {
+      $current_product  = $product->GetSingleProduct($pid,'hd');
+    }
+    else if(isset($_POST['latest']))
+    {
+      $current_product  = $product->GetSingleProduct($pid,'late');
+    }
+
+  }
+ 
 ?>
+
 <section class="container my-5" id="product">
+  <?php if(count($current_product) != 0){ 
+    foreach($current_product as $item):
+    ?>
+
             <div class="row">
               <div class="col-lg-6">
-                  <img class="img-fluid" src="./assets/phones/8.png" alt="">
+                  <img class="img-fluid" src="./assets/<?php echo htmlentities($item['image']); ?>" alt="">
                   <!-- <form action="" class="row">
                     <div class="col" style="width: 100%;">
                       <input type="button" value="Buy Now" name="but_now" class="btn btn-primary my-2 py-2" style="width: 100%;">
@@ -20,10 +43,10 @@
                   </form> -->
               </div>
               <div class="col-lg-6">
-                <h4>Sony XP</h4>
-                <p>Sony</p>
-                <h4>$104.99</h4>
-                <del><small>$124.96</small></del>
+                <h4><?php echo htmlentities($item['product_name']); ?></h4>
+                <p><?php echo strtoupper(htmlentities($item['name'])); ?></p>
+                <h4>$<?php echo htmlentities($item['discount_price']); ?></h4>
+                <del><small>$<?php echo htmlentities($item['product_price']); ?></small></del>
                 <p>(You saved $19.96)</p>
                 <div class="d-flex">
                   <p class="my-1 text-warning me-3">
@@ -381,5 +404,10 @@
                 </div>
               </div>
             </div>
+  <?php 
+    endforeach;  
+  }else
+    echo '<div class="alert alert-danger" role="alert">Sorry device currently Unavailable</div>';
+  ?>
 </section>
         

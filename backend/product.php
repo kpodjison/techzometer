@@ -62,6 +62,37 @@
 
         }
 
+        /**Get Single Product based on product id and filter */
+        public function GetSingleProduct($pid,$filter)
+        {
+            $column_filter = '';
+            if( $filter == 'hd')
+            {
+                $column_filter = 'hotdeal';
+            }
+            else if( $filter == 'cs')
+            {
+                $column_filter = 'coming_soon';
+            }
+            else if( $filter == 'late')
+            {
+                $column_filter = 'latest';
+            }
+
+            $sql = "SELECT product.*,brand.name FROM product RIGHT JOIN brand ON product.product_brand = brand.id WHERE product_id = '$pid' AND $column_filter = 1";
+            $results = $this->DbQuery($sql);
+            $resultsArray = array();
+
+            while($row = mysqli_fetch_assoc($results))
+            {
+                $resultsArray[] = $row;
+            }
+            
+            // echo "<script>console.log('$resultsArray bookings');</script>";
+            return $resultsArray;
+            
+        }
+
 
 
 
