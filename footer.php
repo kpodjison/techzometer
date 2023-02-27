@@ -11,18 +11,18 @@
               </div>
               <div class="col-lg-3 mb-2" id="accounts">
                 <h5>Accounts</h5>
-                <p class="mb-0"><a href="">My Accounts</a></p>
-                <p class="mb-0"><a href="">Wishlist</a></p>
-                <p class="mb-0"><a href="">Order History</a></p>
-                <p class="mb-0"><a href="">News Letter</a></p>
+                <p class="mb-0"><a href="#">My Accounts</a></p>
+                <p class="mb-0"><a href="#">Wishlist</a></p>
+                <p class="mb-0"><a href="#">Order History</a></p>
+                <p class="mb-0"><a href="#">News Letter</a></p>
               </div>
               <div class="col-lg-3 mb-2" id="useful-links">
                 <h5>Useful Links</h5>
-                <p class="mb-0"><a href="">About Us</a></p>
-                <p class="mb-0"><a href="">Contact Us</a></p>
-                <p class="mb-0"><a href="">Privacy Policy</a></p>
-                <p class="mb-0"><a href="">Delivery Info</a></p>
-                <p class="mb-0"><a href="">Terms & Conditions</a></p>
+                <p class="mb-0"><a href="#">About Us</a></p>
+                <p class="mb-0"><a href="#">Contact Us</a></p>
+                <p class="mb-0"><a href="#">Privacy Policy</a></p>
+                <p class="mb-0"><a href="#">Delivery Info</a></p>
+                <p class="mb-0"><a href="#">Terms & Conditions</a></p>
               </div>
               <div class="col-lg-3 mb-2">
                 <h5>News Letter</h5>

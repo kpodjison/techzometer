@@ -1,7 +1,7 @@
 <?php 
   if($_SERVER['REQUEST_METHOD'] === 'POST')
   {
-    $pid = $current_product = '';
+    $pid = $current_product = $flag = '';
     if(isset($_POST['pid']))
     {
       $pid = $_POST['pid'];
@@ -10,6 +10,7 @@
     if(isset($_POST['coming-soon']))
     {
       $current_product  = $product->GetSingleProduct($pid,'cs');
+      $flag = 'coming-soon';
     }
     else if(isset($_POST['hot-deals']))
     {
@@ -45,19 +46,26 @@
               <div class="col-lg-6">
                 <h4><?php echo htmlentities($item['product_name']); ?></h4>
                 <p><?php echo strtoupper(htmlentities($item['name'])); ?></p>
-                <h4>$<?php echo htmlentities($item['discount_price']); ?></h4>
-                <del><small>$<?php echo htmlentities($item['product_price']); ?></small></del>
-                <p>(You saved $19.96)</p>
+                <h4><?php echo ($flag == 'coming-soon') ? '' :'$'.htmlentities($item['discount_price']); ?></h4>
+                <del><small><?php echo ($flag == 'coming-soon') ? '' :'$'.htmlentities($item['product_price']); ?></small></del>
+                <?php 
+                  if($flag != 'coming-soon')
+                  {
+                    echo ' <p>(You saved $19.96)</p>';
+                  }                 
+                ?>
                 <div class="d-flex">
-                  <p class="my-1 text-warning me-3">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star-half-stroke"></i>
-                  </p>
-                  <a href="#" class="me-3">(2 reviews)</a>
-                  <a href="#">Add a review</a>
+                  <?php if($flag != 'coming-soon'): ?>
+                    <p class="my-1 text-warning me-3">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star-half-stroke"></i>
+                    </p>
+                    <a href="#" class="me-3">(2 reviews)</a>
+                    <a href="#">Add a review</a>
+                  <?php endif; ?>
                 </div>
                 <hr>
                 <button class="btn"><span class="text-danger"><i class="fa-regular fa-heart me-2"></i>&nbsp;Wishlist</span></button>
@@ -103,10 +111,10 @@
 
                     <div class="row">
                         <div class="col" style="width: 100%;">
-                          <input type="button" value="Buy Now" name="but_now" class="btn btn-primary my-2 py-2" style="width: 100%;">
+                          <input type="button" value="Buy Now" name="but_now" class="btn btn-primary my-2 py-2 <?php if($flag == 'coming-soon') echo 'disabled'; ?>" style="width: 100%;">
                         </div>
                         <div class="col">
-                          <input type="button" value="Add To Cart" name="add_to_cart" class="btn btn-warning my-2 py-2" style="width: 100%;">
+                          <input type="button" value="Add To Cart" name="add_to_cart" class="btn btn-warning my-2 py-2 <?php if($flag == 'coming-soon') echo 'disabled'; ?>" style="width: 100%;">
                         </div>                  
                     </div>
                 </form>
