@@ -76,7 +76,7 @@
                   <li>1.4 GHz Quad Core<sup><small>TM</small></sup> Processor</li>
                   <li>20MP front Camera</li>
                 </ul>
-                <form action="" class="">
+                <form action="cart.php" class="">
                   <div class="row">
                       <div class="col-lg-6 d-flex my-2">
                       <h6 class="py-2">Select Color:</h6>&nbsp;
@@ -111,7 +111,7 @@
 
                     <div class="row">
                         <div class="col" style="width: 100%;">
-                          <input type="button" value="Buy Now" name="but_now" class="btn btn-primary my-2 py-2 <?php if($flag == 'coming-soon') echo 'disabled'; ?>" style="width: 100%;">
+                          <input type="submit" value="Buy Now" name="but_now" class="btn btn-primary my-2 py-2 <?php if($flag == 'coming-soon') echo 'disabled'; ?>" style="width: 100%;">
                         </div>
                         <div class="col">
                           <input type="button" value="Add To Cart" name="add_to_cart" class="btn btn-warning my-2 py-2 <?php if($flag == 'coming-soon') echo 'disabled'; ?>" style="width: 100%;">

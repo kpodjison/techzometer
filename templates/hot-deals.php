@@ -15,9 +15,9 @@
                   </p>
                   <small class="my-1"><del>GHC <?php echo htmlentities($item['product_price']); ?> </del> </small>
                   <small class="my-1">GHC <?php echo htmlentities($item['discount_price']); ?></small>
-                  <form action="product.php" method="POST">
+                  <form action="cart.php" method="POST">
                     <input type="hidden" name="pid" value="<?php echo htmlentities($item['product_id'])?>">
-                    <button type="submit" class="btn btn-warning mx-3" name="hot-deals">Add To Card</button>
+                    <button type="submit" class="btn btn-warning mx-3" name="hot-deals">Add To Cart</button>
                   </form>
                 </div>
               </div>  

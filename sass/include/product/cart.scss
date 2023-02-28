@@ -1,0 +1,22 @@
+#shopping-cart
+{
+   tbody
+   {
+    .prd-img img
+    {
+        width:70px;
+        height:70px;
+    }
+    .item-info,.price-info
+    {
+        h1,p {
+            line-height: 4px;
+        }
+    }
+   }
+   .pay-mtd img
+    {
+        width:50px;
+        height:30px;
+    }
+}
