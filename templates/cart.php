@@ -1,21 +1,25 @@
 <?php 
-  if($_SERVER['REQUEST_METHOD'] === 'GET')
-  {
-    $pid = $current_product = $flag = '';
-    if(isset($_GET['cart']))
-    {
-      // $pid = $_GET['pid'];
-    }
 
+  $cart = new cart($db);
+
+  if($_SERVER['REQUEST_METHOD'] === 'POST')
+  {
+    if(isset($_POST['buy_now']))
+    {
+      $cart->addToCart();
+    }
   }
- 
 ?>
 <div class="cart container-fluid" style="background: #f5f5f5;">
   <h4 class="px-5 py-3">Shopping Cart</h4>
 </div>
 <div class="container p-4 ">
     <div class="row" id="shopping-cart">
-      <div class="col-lg-8 px-3 card py-2">      
+      <div class="col-lg-8 px-3 card py-2"> 
+        <?php 
+          echo SuccessMsg();
+          echo ErrorMsg();
+        ?>     
         <div class="table-responsive">
           <table class="table">
             <thead>
