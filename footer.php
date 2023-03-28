@@ -48,8 +48,10 @@
     <!-- boostrap js -->
     <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <!-- owl-carousel  -->
-    <script src="./node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
     <!-- local js  -->
     <script src="./src/js/index.js"></script>
+    <script src="./src/js/app.js"></script>
+    <script src="./node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
+    
 </body>
 </html>

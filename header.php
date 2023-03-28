@@ -10,13 +10,17 @@
     <title>Techzometer</title>
     <!-- local css  -->
     <link rel="stylesheet" href="./src/css/style.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
     <link rel="stylesheet" href="./node_modules/owl.carousel/dist/assets/owl.theme.default.css">
     <link rel="stylesheet" href="./node_modules/owl.carousel/dist/assets/owl.carousel.css">
      <!-- fontawesome  -->
      <script src="https://kit.fontawesome.com/c2e76fb8f4.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
-    <main>
+    <main id="app">
+      <p v-if="!isHidden" id='uuid' class="text-white"><?php echo (htmlentities($_SESSION['u_user'])) ?></p>
         <nav class="navbar navbar-expand-lg cp1-bg">
             <div class="container-fluid">
               <a class="navbar-brand me-5" href="index.php">Techzometer</a>
@@ -54,10 +58,10 @@
                     <a class="nav-link">Contact</a>
                   </li>
                 </ul>
-                <div class="d-flex">
-                  <a href="#" class="rounded-pill cp2-bg py-2" id="shopping-cart">
+                <div class="d-flex" v-if="!isEmptyCart">
+                  <a href="cart.php" class="rounded-pill cp2-bg py-2" id="shopping-cart">
                     <span class="px-2 text-white"><i class="fa-solid fa-cart-arrow-down"></i></span>
-                    <span class="px-3 py-2 rounded-pill bg-white text-black">10</span>   
+                    <span class="px-3 py-2 rounded-pill bg-white text-black">{{cart.length}}</span>   
                   </a>
                 </div>
               </div>

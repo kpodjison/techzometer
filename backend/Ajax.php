@@ -15,14 +15,24 @@ $resultArray = array();
 
 if($_SERVER['REQUEST_METHOD'] === "GET")
 {
-    if(isset($_GET['action']) && ($_GET['action'] == "getcart"))
+    if(isset($_GET['action']))
+    {
+        $action = $_GET['action'];
+    }
+
+
+    if( $action == "getcart" )
     {
         $uuid = $_GET['uid'];
         $resultArray = $cart->getCart($uuid);
     }
+    else if($action == "gethotdeals")
+        {
+            $resultArray = $product->GetHotDeals();
+        }
     
 
-    
+
     echo json_encode($resultArray);
     exit;
 }

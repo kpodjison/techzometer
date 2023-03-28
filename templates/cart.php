@@ -24,94 +24,51 @@
           <table class="table">
             <thead>
               <tr>
+                <th scope="col">#</th>
                 <th scope="col">Product</th>
                 <th scope="col">Quantity</th>
                 <th scope="col">Price</th>
-                <th scope="col"></th>
+                <th scope="col">Purchase Date</th>
+                <th scope="col">Action</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                  <td class="row">
-                    <div class="col-sm-3 prd-img">
-                      <img src="./assets/oleg-laptev-QRKJwE6yfJo-unsplash.jpg" alt="" class="img-fluid">
-                    </div>
-                    <div class="col-sm-9 item-info">
-                      <h5>Samsung</h5>
-                      <p><small>Size:4GB,Color:Gold</small></p>
-                      <p><small>Brand:4GB</small>                  
-                    </div>                  
-                  </td>
-                  <td style="width:10%;">
-                    <input type="number" name="" id="item1" min="1" class="form-control">
-                  </td>
-                  <td class="price-info">
-                    <h5>$500</h5>
-                    <p>$500</p>
-                  </td>
-                  <td>
-                    <div class="btn-group">
-                      <a href="" class="px-2 btn btn-outline-dark"><i class="fa-regular fa-heart"></i></a>
-                      <a href="" class="px-2 btn btn-danger">Remove</a>
-                    </div>
-                  </td>
-              </tr>
-              <tr>
-                  <td class="row">
-                    <div class="col-sm-3 prd-img">
-                      <img src="./assets/oleg-laptev-QRKJwE6yfJo-unsplash.jpg" alt="" class="img-fluid">
-                    </div>
-                    <div class="col-sm-9 item-info">
-                      <h5>Samsung</h5>
-                      <p><small>Size:4GB,Color:Gold</small></p>
-                      <p><small>Brand:4GB</small>                  
-                    </div>                  
-                  </td>
-                  <td style="width:10%;">
-                    <input type="number" name="" id="item1" min="1" class="form-control">
-                  </td>
-                  <td class="price-info">
-                    <h5>$500</h5>
-                    <p>$500</p>
-                  </td>
-                  <td>
-                    <div class="btn-group">
-                      <a href="" class="px-2 btn btn-outline-dark"><i class="fa-regular fa-heart"></i></a>
-                      <a href="" class="px-2 btn btn-danger">Remove</a>
-                    </div>
-                  </td>
-              </tr>
-              <tr>
-                  <td class="row">
-                    <div class="col-sm-3 prd-img">
-                      <img src="./assets/oleg-laptev-QRKJwE6yfJo-unsplash.jpg" alt="" class="img-fluid">
-                    </div>
-                    <div class="col-sm-9 item-info">
-                      <h5>Samsung</h5>
-                      <p><small>Size:4GB,Color:Gold</small></p>
-                      <p><small>Brand:4GB</small>                  
-                    </div>                  
-                  </td>
-                  <td style="width:10%;">
-                    <input type="number" name="" id="item1" min="1" class="form-control">
-                  </td>
-                  <td class="price-info">
-                    <h5>$500</h5>
-                    <p>$500</p>
-                  </td>
-                  <td>
-                    <div class="btn-group">
-                      <a href="" class="px-2 btn btn-outline-dark"><i class="fa-regular fa-heart"></i></a>
-                      <a href="" class="px-2 btn btn-danger">Remove</a>
-                    </div>
-                  </td>
-              </tr>
+                <template v-for="(item, id) in cart">
+                  <tr >
+                      <td scope="row">{{ id+1}}</td>
+                      <td class="row">
+                        <div class="col-sm-4 prd-img">
+                          <img src="./assets/oleg-laptev-QRKJwE6yfJo-unsplash.jpg" alt="" class="img-fluid">
+                        </div>
+                        <div class="col-sm-8 item-info">
+                          <h5>Samsung</h5>
+                          <p><small>Size:4GB,Color:Gold</small></p>
+                          <p><small>Brand:4GB</small>                  
+                        </div>                  
+                      </td>
+                      <td style="width:10%;">
+                        <input type="number" name="" id="item1" min="1" class="form-control">
+                      </td>
+                      <td class="price-info">
+                        <h5>$500</h5>
+                        <p>$500</p>
+                      </td>
+                      <td>790</td>
+                      <td>
+                        <div class="btn-group">
+                          <a href="" class="px-2 btn btn-outline-dark"><i class="fa-regular fa-heart"></i></a>
+                          <a href="" class="px-2 btn btn-danger">Remove</a>
+                        </div>
+                      </td>
+                  </tr>
+                </template>
+            
             </tbody>
           </table>          
         </div>
         <div class="d-flex justify-content-between py-2">
             <a href="" class="btn btn-outline-secondary"><span><i class="fa-solid fa-chevron-left"></i></span> Continue Shopping</a>
-            <input type="button" value="Proceed To Pay" name="proceed_to_pay" class="btn btn-primary">
+            <input type="button" value="Proceed To Pay" name="proceed_to_pay" class="btn btn-primary" v-if="!isEmptyCart">
         </div>
       </div>
       <div class="col-lg-4">

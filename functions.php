@@ -8,6 +8,7 @@ require_once "./backend/cart.php";
 $db = new DBController();
 $product = new Product($db);
 
-$hot_deals = $product->GetHotDeals();
+// $hot_deals = $product->GetHotDeals();
+// var_dump($hot_deals);
 
 
