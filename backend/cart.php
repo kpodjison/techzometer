@@ -37,6 +37,21 @@ class Cart{
        }  
     }
 
+    public function getCart($uuid)
+    {
+       
+ 
+            $sql = "SELECT * FROM cart WHERE uuid = '$uuid' ";
+            $results = $this->DbQuery($sql);
+            $resultsArray = array();
+
+            while($row = mysqli_fetch_assoc($results))
+            {
+                $resultsArray[] = $row;
+            }
+            return $resultsArray;
+    }
+
 
      /** DBQuery
          * This method provides a shorthand for performing database queries
