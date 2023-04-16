@@ -10,7 +10,7 @@ The following are the technologies & tools used
   * JQuery
   <!-- #* SELECT2 -->
   * OWLCAROUSEL2
-* BOOSTRAP
+* BOOTSTRAP
 * PHP
 * MySQL
 * REDIS
